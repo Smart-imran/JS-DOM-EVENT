@@ -6,7 +6,27 @@
     <title>Sumary event handeler</title>
 </head>
 <body>
-    
+    <h1>Explore DOM event</h1>
+    <button onclick="makeGreen()"> Make Green</button>      
+    <button id="make-yellow"> Make Yellow</button>
+    <br><br>
+    <input type="email"  id="user-email">
+
+
+    <script>
+        //option 1
+        function makeGreen(){
+            document.body.style.backgroundColor ="Green";
+        } 
+
+        document.getElementById("make-yellow").addEventListener("click",function(){
+            document.body.style.backgroundColor ="Red";
+        })
+
+        document.getElementById("user-email").addEventListener("keyup",function(event){
+            console.log(event.target.value);
+        })
+    </script>    
     
 </body>
 </html>
